@@ -21,7 +21,7 @@ Este projeto oferece uma solução para o gerenciamento de solicitações de ser
 
 - Sinta-se à vontade para contribuir, reportar problemas ou sugerir melhorias.
 
-###📖Documentação
+### 📖Documentação
 
 - Confira a [documentação](docs/) para orientações detalhadas.
 
