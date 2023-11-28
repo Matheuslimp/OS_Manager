@@ -1,11 +1,7 @@
 # OS_Manager
-Descrição do Projeto:
-
-# Descrição do Projeto
-
 ## 🛠️ Gerenciamento de Solicitações de Serviço em JavaScript
 
-Este projeto oferece uma solução abrangente para o gerenciamento eficiente de solicitações de serviço, fornecendo uma interface intuitiva e funcionalidades poderosas. Desenvolvido em JavaScript, é altamente flexível e pode ser facilmente personalizado para atender às necessidades específicas da sua organização.
+Este projeto oferece uma solução para o gerenciamento de solicitações de serviço. Desenvolvido em JavaScript, pode ser personalizado para atender às necessidades de pequenas empresas.
 
 ### ✨Recursos Principais
 
