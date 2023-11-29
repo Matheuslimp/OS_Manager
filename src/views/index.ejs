@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Serviço</title>
+    <style>
+        body {
+            background-color: rgb(92, 92, 92);
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .formulario-box {
+            background-color: rgb(233, 233, 233);
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="formulario-box">
+        <form action="/enviar_servico" method="post">
+            <h2>Formulário de Serviço</h2>
+            <!-- Campo Solicitante -->
+            <label for="solicitante">Solicitante:</label>
+            <input type="text" id="solicitante" name="solicitante" required>
+
+            <!-- Campo Descrição do Serviço -->
+            <label for="descricao">Descrição do Serviço:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+            <!-- Campo Contato (E-mail) -->
+            <label for="contato">Contato (E-mail):</label>
+            <input type="email" id="contato" name="contato" required>
+
+            <!-- Botão de Envio -->
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+</body>
+</html>
