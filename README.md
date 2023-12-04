@@ -14,8 +14,12 @@ Este projeto oferece uma solução para o gerenciamento de solicitações de ser
 ### 🚀Como Começar
 
 1. Clone o repositório: `git clone https://github.com/Matheuslimp/OS_Manager.git`
-2. Instale as dependências: 
-3. Inicie o servidor:
+2. Instale as dependências:
+   - NodeJS
+   - Express
+   - Ejs
+4. Inicie o servidor:
+   - node app.js
 
 ### 🤝Contribuições São Bem-Vindas
 
