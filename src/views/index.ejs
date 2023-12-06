@@ -53,19 +53,17 @@
     <div class="formulario-box">
         <form action="/enviar_servico" method="post">
             <h2>Formulário de Serviço</h2>
-            <!-- Campo Solicitante -->
+
             <label for="solicitante">Solicitante:</label>
             <input type="text" id="solicitante" name="solicitante" required>
 
-            <!-- Campo Descrição do Serviço -->
-            <label for="descricao">Descrição do Serviço:</label>
-            <textarea id="descricao" name="descricao" rows="4" required></textarea>
 
-            <!-- Campo Contato (E-mail) -->
-            <label for="contato">Contato (E-mail):</label>
-            <input type="email" id="contato" name="contato" required>
+            <label for="resumo">Faça um resumo do serviço:</label>
+            <textarea id="resumo" name="resumo" rows="4" required></textarea>
 
-            <!-- Botão de Envio -->
+            <label for="contato">Contato (E-mail ou Telefone):</label>
+            <input type="text" id="contato" name="contato" required>
+
             <input type="submit" value="Enviar">
         </form>
     </div>

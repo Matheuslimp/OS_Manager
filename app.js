@@ -20,10 +20,16 @@ app.get('/', (req, res) => {
 // Processamento de requisições
 app.post('/enviar_servico', (req, res) => {
     const solicitante = req.body.solicitante;
+    const resumo = req.body.resumo;
     const contato = req.body.contato;
 
-    console.log('solicitante:', solicitante);
+    const novaSolicitacao = new Solicitacao(solicitante,resumo,contato)
+
+    novaSolicitacao.createrSolicitacao()
+
+    /* console.log('solicitante:', solicitante);
     console.log('E-mail:', contato);
+    console.log('E-mail:', resumo); */
 });
 
 

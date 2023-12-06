@@ -1,21 +1,26 @@
-const moment = require('moment')
+const moment = require('moment');
 
 class Solicitacao {
-    constructor(servico){
-        this.id = this.geradorId
-        this.servico = servico;
+    constructor(solicitante, resumo, contato) {
+        this.id = this.geradorId();
+        this.solicitante = solicitante;
+        this.resumo = resumo;
+        this.contato = contato;
+        this.data = moment().format('YYYY-MM-DD HH:mm:ss');
     }
-    // Metodos da class Solicitacao
-    geradorId(){
-        // Gera um numero baseado na data que a solicitação foi criada, esse numero é utilizado como Indentificador da solicitação.
+
+    // Método para gerar o ID
+    geradorId() {
         return moment().format('YYYYMMDDHHmmss');
     }
-    createrSolicitacao(){
-        console.log('Solicitação criada:', this.id, this.servico)
+
+    createrSolicitacao() {
+        console.log('Solicitação criada:', this.id, this.resumo, this.contato);
     }
-    imprimeNumber(){
-        console.log(this.number)
+
+    imprimeId() {
+        console.log(this.id);
     }
 }
 
-module.exports = Solicitacao
+module.exports = Solicitacao;
