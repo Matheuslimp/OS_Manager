@@ -1,23 +1,30 @@
-const Solicitacao = require('./src/modulos/Solicitacao');
+const Solicitacao = require('./src/modulos/Solicitacao'); // ainda não utilizado!
 const express = require('express');
+const bodyParser = require('body-parser');
 
 // Configurações do servidor;
 const app = express();
 const PORT = 3000;
-// Configuração de express para renderiazar EJS
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/src/views');
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// primeira instacia da classe Solicitacoes
 
 
-// Rotas para renderização de pastas
-app.get('/index', (req, res) => {
+// Rotas para rederização de paginas
+app.get('/', (req, res) => {
     res.render('index');
 
 });
 
+// Processamento de requisições
+app.post('/enviar_servico', (req, res) => {
+    const solicitante = req.body.solicitante;
+    const contato = req.body.contato;
 
+    console.log('solicitante:', solicitante);
+    console.log('E-mail:', contato);
+});
 
 
 app.listen(PORT, () => { console.log(`Aplicação iniciada em http://localhost:${PORT} ou 127.0.0.1:${PORT}`);});
