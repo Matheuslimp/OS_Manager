@@ -37,3 +37,9 @@ Este projeto oferece uma solução para o gerenciamento de solicitações de ser
 ### 📬Entre em Contato
 
 - [Email](mailto:matheuslimaa1400@gmail.com)
+---------
+
+Requistos de tela
+
+Tela de cadastro de novo usuário
+Tela Lista de usuário existentes

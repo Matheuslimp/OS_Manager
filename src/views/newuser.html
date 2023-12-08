@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin:0;
+            display: flexbox;
+            float: left;     
+        }
+ 
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            background-color: rgb(54, 30, 59);
+            padding-top: 20px;
+            transition: 0.2s;
+            overflow-x: hidden;
+            border-top-right-radius: 30px;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .openbtn {
+            height: 100%;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: rgb(54, 30, 59);
+            color: white;
+            position: fixed;
+            padding: 10px 15px;
+            border-top-right-radius: 5px;
+        }
+        .content {
+            
+            width: 96.5vw;
+            height: 99vh;
+            margin: 5px 5px 5px 55px;
+            background-color: rgb(187, 185, 185);
+            border-radius: 10px;
+        }
+    </style>
+    <title>Cadastro de novo usuário:</title>
+</head>
+<body>
+    <div class="openbtn" onclick="toggleSidebar()">☰</div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+        <a href="#">NEW USER</a>
+    </div>
+    <div class="content">
+        Lorem ips
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+                content.style.marginLeft = "0";
+            } else {
+                sidebar.style.width = "250px";
+                content.style.marginLeft = "250px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

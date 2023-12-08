@@ -12,10 +12,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // Rotas para rederização de paginas
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
     res.render('index');
 
 });
+
+app.get('/newuser', (req,res) =>{
+    res.render('newuser')
+})
 
 // Processamento de requisições
 app.post('/enviar_servico', (req, res) => {
