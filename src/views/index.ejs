@@ -1,72 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Serviço</title>
     <style>
         body {
-            background-color: rgb(92, 92, 92);
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             margin: 0;
+            float: left;
         }
 
-        .formulario-box {
-            background-color: rgb(233, 233, 233);
-            width: 300px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            text-align: center;
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            background-color: rgb(37, 158, 148);
+            padding-top: 20px;
+            transition: 0.2s;
+            overflow-x: hidden;
+            border-top-right-radius: 30px;
+            z-index: 1000;
         }
 
-        label {
+        .sidebar a {
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
             display: block;
-            margin-top: 10px;
+            transition: 0.3s;
         }
 
-        input,
-        textarea {
-            width: calc(100% - 16px);
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #4caf50;
-            color: white;
+        .openbtn {
+            height: 100%;
+            font-size: 20px;
             cursor: pointer;
+            background-color: rgb(54, 30, 59);
+            color: white;
+            position: fixed;
+            padding: 10px 15px;
+            border-top-right-radius: 5px;
         }
 
-        input[type="submit"]:hover {
-            background-color: #45a049;
+        .content {
+            overflow: hidden;
+            width: auto;
+            height: 95vh;
+            margin: 5px 5px 5px 55px;
+            padding: 20px;
+            background-color: rgba(237, 236, 238, 0.507);
+            border-radius: 1%;
+            transition: margin-left 0.2s;
+        }
+
+        .section {
+            overflow: hidden;
+            display: inline-block;
+            border-radius: 10px;
+            background-color: rgb(181, 184, 184);
+        }
+
+        #section1 {
+            width: 20%;
+            height: 40vh;
+        }
+
+        #section2 {
+            width: 79.5%;
+            height: 40vh;
+        }
+
+        #section3 {
+            width: 100%;
+            height: 55vh;
+        }
+        .formulario-box{
+            font-style: oblique;
+            padding: 5px;
         }
     </style>
+    <title>Cadastro de novo usuário:</title>
 </head>
 <body>
-    <div class="formulario-box">
-        <form action="/enviar_servico" method="post">
-            <h2>Formulário de Serviço</h2>
-
-            <label for="solicitante">Solicitante:</label>
-            <input type="text" id="solicitante" name="solicitante" required>
-
-
-            <label for="resumo">Faça um resumo do serviço:</label>
-            <textarea id="resumo" name="resumo" rows="4" required></textarea>
-
-            <label for="contato">Contato (E-mail ou Telefone):</label>
-            <input type="text" id="contato" name="contato" required>
-
-            <input type="submit" value="Enviar">
-        </form>
+    <div class="openbtn" onclick="toggleSidebar()">☰</div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+        <a href="#">NEW USER</a>
     </div>
+    <div class="content">
+        <div class="section" id="section1"></div>
+        <div class="section" id="section2">
+            <div class="formulario-box">
+                <form action="#">
+                    <h2>Detalhes do User:</h2>
+                    <label for="nome">Nome do usuário:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="login">Login:</label>
+                    <input type="text" id="login" name="login" required>
+
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            
+        </div>
+        <div class="section" id="section3"></div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+                content.style.marginLeft = "0";
+            } else {
+                sidebar.style.width = "250px";
+                content.style.marginLeft = "250px";
+            }
+        }
+    </script>
 
 </body>
+
 </html>
